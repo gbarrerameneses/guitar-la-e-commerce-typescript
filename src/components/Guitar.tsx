@@ -6,7 +6,12 @@ interface Guitar {
   price: number
 }
 
-const Guitar = ({guitar, addToCart} : {guitar : Guitar, addToCart: (item: Guitar) => void}) => { // Destructuring - Props - InlineType
+type GuitarProps = {
+  guitar : Guitar,
+  addToCart: (item: Guitar) => void
+}
+
+const Guitar = ({guitar, addToCart} : GuitarProps) => { // Destructuring - Props - InlineType
 
 const { name, image, description, price } = guitar
 
