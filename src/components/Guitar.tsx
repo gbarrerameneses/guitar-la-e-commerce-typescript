@@ -1,10 +1,4 @@
-interface Guitar {
-  id: number
-  name: string
-  image: string
-  description: string
-  price: number
-}
+import type { Guitar } from '../types/index'
 
 type GuitarProps = {
   guitar : Guitar,
@@ -14,7 +8,6 @@ type GuitarProps = {
 const Guitar = ({guitar, addToCart} : GuitarProps) => { // Destructuring - Props - InlineType
 
 const { name, image, description, price } = guitar
-
 
   return (
     <>
