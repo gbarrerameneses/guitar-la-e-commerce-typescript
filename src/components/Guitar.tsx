@@ -1,8 +1,14 @@
-import React from 'react'
+interface Guitar {
+  id: number
+  name: string
+  image: string
+  description: string
+  price: number
+}
 
-const Guitar = ({guitar, addToCart}) => { // Destructuring - Props
+const Guitar = ({guitar, addToCart} : {guitar : Guitar, addToCart: (item: Guitar) => void}) => { // Destructuring - Props - InlineType
 
-const { id, name, image, description, price } = guitar
+const { name, image, description, price } = guitar
 
 
   return (
